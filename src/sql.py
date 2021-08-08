@@ -51,10 +51,8 @@ class CloudSQL:
             raise Exception("loading orders failed")
 
     def cross_check_helper(self,df, records):
-        for row in df.to_records(index=False):
-            print(row[0])
-            print(records[0])
-            if row[0] != records[0]:
+        for idx,row in enumerate(df.to_records(index=False)):
+            if row[0] != records[idx][0]:
                 raise Exception("Data inconsistency..")
 
     def cross_check(self, cur):
