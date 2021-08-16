@@ -6,6 +6,7 @@ class CloudSQL:
     def __init__(self, folder_path):
         self.FOLDER_PATH = folder_path
 
+    # process 's type string
     def get_formatted_string(self, word):
         word = str(word)
         parts = word.split("\'")
