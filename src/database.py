@@ -4,6 +4,7 @@ from secret.config import config
 
 class Database:
 
+    #initializing the uri, connection and cursor
     def __init__(self):
         self.uri = f"dbname={config['DBNAME']} user={config['USER']} password={config['PASSWORD']} host={config['HOST']}"
         self.cur = None
