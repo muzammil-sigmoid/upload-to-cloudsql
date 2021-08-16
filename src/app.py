@@ -8,6 +8,7 @@ class App:
         self.db = Database()
         self.sql = CloudSQL(config['FOLDER_PATH'])
 
+    # driver function 
     def solve(self):
         try:
             self.db.connect()
